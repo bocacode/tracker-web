@@ -6,6 +6,7 @@ function Activities() {
   const [activitiesList, setActivitiesList] = useState(null)
   useEffect(() => {
     fetch('https://tracker-bocacode.web.app/activities')
+    // fetch('http://localhost:5000/activities')
       .then(res => res.json())
       .then(data => setActivitiesList(data))
       .catch(error => alert('Error getting Activities!'))
